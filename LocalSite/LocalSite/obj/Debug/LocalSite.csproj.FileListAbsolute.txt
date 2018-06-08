@@ -1,0 +1,4 @@
+D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.dll
+D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.pdb
+D:\Teju\DotNet\LocalSite\LocalSite\obj\Debug\LocalSite.dll
+D:\Teju\DotNet\LocalSite\LocalSite\obj\Debug\LocalSite.pdb
