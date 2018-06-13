@@ -17,7 +17,10 @@
     <br />
     <asp:Label ID="UserNameID" runat="server" Text=" USER NAME : "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="UserNameTextBoxID" runat="server"></asp:TextBox>
+    <asp:Label ID="Label1" runat="server" Text="@amphorainc.com"></asp:Label>
+    <asp:Button ID="SendPwdID" runat="server" EnableTheming="True" 
+        onclick="SendPwdID_Click" style="height: 26px" Text="Send password" />
     <br />
     <br />
     <br />
@@ -38,7 +41,8 @@
     <br />
     <br />
     <br />
-    <asp:Button ID="CancelRegisterID" runat="server" Text="CANCEL" />
+    <asp:Button ID="CancelRegisterID" runat="server" Text="CANCEL" 
+        onclick="CancelRegisterID_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="SubmitButtonID" runat="server" Text="SUBMIT" 
     onclick="SubmitButtonID_Click" />

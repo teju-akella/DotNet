@@ -11,7 +11,20 @@ namespace LocalSite.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
+            //RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Redirect("ChangePassword.aspx");
+            }
+            catch (Exception ex)
+            {
+                Label1.Text = "not changed"+ex;
+
+            }
         }
     }
 }
