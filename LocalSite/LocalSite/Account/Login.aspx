@@ -5,10 +5,10 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <p>
-        <asp:HyperLink ID="ChangePwdHyperLinkID" runat="server" EnableViewState="false"  NavigateUrl="Register.aspx"> Change Password</asp:HyperLink>
-       <a href="ChangePassword.aspx">Change Password</a>
+        <asp:HyperLink ID="ChangePwdHyperLinkID" runat="server" EnableViewState="false"  NavigateUrl="ChangePassword.aspx"> Change Password</asp:HyperLink>
+       
         <br />
-        <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Change Pswd</asp:LinkButton>
+        
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </p>
     <p>

@@ -18,7 +18,7 @@ namespace LocalSite.Account
         {
             try
             {
-                Response.Redirect("ChangePassword.aspx");
+                Response.Redirect("ChangePasswordNew.aspx");
             }
             catch (Exception ex)
             {

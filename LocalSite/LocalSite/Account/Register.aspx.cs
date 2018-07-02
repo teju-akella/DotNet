@@ -9,6 +9,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using LocalSite.Model;
+using EncryptionAndDecryption;
+
 
 namespace LocalSite.Account
 {
@@ -20,6 +22,8 @@ namespace LocalSite.Account
         SqlCommand cmd = new SqlCommand();
         UserActions regu = new UserActions();
 
+        string s; int n;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             PasswordTextBoxID.Enabled = false;
@@ -30,7 +34,8 @@ namespace LocalSite.Account
 
         protected void SubmitButtonID_Click(object sender, EventArgs e)
         {
-            if (PasswordID.ToString().Equals(ConfirmPasswordID.ToString()))
+            //if (PasswordID.ToString().Equals(ConfirmPasswordID.ToString()))
+            if (PasswordTextBoxID.Text.Equals(Session["MailPassword"]))
             {
                 /*con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionStringDB"].ToString();
                 con.Open();
@@ -39,8 +44,9 @@ namespace LocalSite.Account
                 int n = cmd.ExecuteNonQuery();
                 con.Close();*/
 
-                
-                int n=regu.userregister(UserNameTextBoxID.Text, PasswordTextBoxID.Text);
+
+                s = EncryptionAndDecryption.Class1.Encrypt(PasswordTextBoxID.Text);
+                int n=regu.userregister(UserNameTextBoxID.Text, s);
                 if (n>0)
                 {
                     ErrorMsg.Visible = true;
@@ -50,7 +56,7 @@ namespace LocalSite.Account
             }
             else
             {
-                ErrorMsg.Text = "Please make sure your password and Confirm Password columns should match";
+                ErrorMsg.Text = "Please make sure your password should be the one sent to your mail ";
             }
 
             
@@ -64,11 +70,33 @@ namespace LocalSite.Account
 
         protected void SendPwdID_Click(object sender, EventArgs e)
         {
-            regu.sendMail(UserNameTextBoxID.Text);
-            PasswordTextBoxID.Enabled = true;
-            ConfirmPasswordTextBoxID.Enabled = true;
-            SendPwdID.Text = "Re Send Password";
+            // n= regu.CheckUserAvailability(UserNameTextBoxID.Text);
+            if (regu.CheckUserAvailability(UserNameTextBoxID.Text)==true)
+            //if(s!=null)
+            {
+                ErrorMsg.Visible = true;
+                ErrorMsg.Text = "UserName Not Available";
+                
+            }
+             else
+            {
+               
+                Session["MailPassword"] = "";
+                Session["MailPassword"] = regu.sendMail(UserNameTextBoxID.Text);
+                PasswordTextBoxID.Enabled = true;
+                ConfirmPasswordTextBoxID.Enabled = true;
+                SendPwdID.Text = "Re Send Password";
+            }
+            
         }
+
+        //protected void UserNameTextBoxID_TextChanged(object sender, EventArgs e)
+        //{
+          
+        //        ErrorMsg.Text = "UserName Available";
+        //    }
+           
+        //}
 
         
 

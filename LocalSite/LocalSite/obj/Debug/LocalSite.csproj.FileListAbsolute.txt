@@ -1,5 +1,11 @@
-D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.dll
-D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.pdb
+D:\Teju\DotNet\LocalSite\Backup\LocalSite\bin\LocalSite.dll
+D:\Teju\DotNet\LocalSite\Backup\LocalSite\bin\LocalSite.pdb
+D:\Teju\DotNet\LocalSite\Backup\LocalSite\obj\Debug\LocalSite.csprojResolveAssemblyReference.cache
+D:\Teju\DotNet\LocalSite\Backup\LocalSite\obj\Debug\LocalSite.dll
+D:\Teju\DotNet\LocalSite\Backup\LocalSite\obj\Debug\LocalSite.pdb
+D:\Teju\DotNet\LocalSite\LocalSite\obj\Debug\LocalSite.csprojResolveAssemblyReference.cache
 D:\Teju\DotNet\LocalSite\LocalSite\obj\Debug\LocalSite.dll
 D:\Teju\DotNet\LocalSite\LocalSite\obj\Debug\LocalSite.pdb
-D:\Teju\DotNet\LocalSite\LocalSite\obj\Debug\LocalSite.csprojResolveAssemblyReference.cache
+D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.dll.config
+D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.dll
+D:\Teju\DotNet\LocalSite\LocalSite\bin\LocalSite.pdb

@@ -22,7 +22,10 @@
                     <asp:Label ID="NewPwdLblID" runat="server" Text="New Password: "></asp:Label>
                 </td>
                 <td align="left">
-                    <asp:TextBox ID="ForgetNewPwdtxtbxID" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="ForgetNewPwdtxtbxID" runat="server" TextMode="Password" ></asp:TextBox>
+                     <asp:RegularExpressionValidator ID="Regex2" runat="server" ControlToValidate="ForgetNewPwdtxtbxID"
+                         ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$"
+                            ErrorMessage="Minimum 8 characters atleast 1 Alphabet, 1 Number and 1 Special Character" ForeColor="Red" />
                 </td>
                 
             </tr>
@@ -49,7 +52,7 @@
                 </td>
                  <td align="left">
                     
-    <asp:Button ID="ChangePwdBtnID" runat="server" Text="Change Password" />
+    <asp:Button ID="ChangePwdBtnID" runat="server" Text="Change Password" OnClick="ChangePwdBtnID_Click" />
                     
                 </td>
                 

@@ -17,7 +17,7 @@
     <br />
     <asp:Label ID="UserNameID" runat="server" Text=" USER NAME : "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="UserNameTextBoxID" runat="server"></asp:TextBox>
+    <asp:TextBox ID="UserNameTextBoxID" runat="server" ></asp:TextBox>
     <asp:Label ID="Label1" runat="server" Text="@amphorainc.com"></asp:Label>
     <asp:Button ID="SendPwdID" runat="server" EnableTheming="True" 
         onclick="SendPwdID_Click" style="height: 26px" Text="Send password" />

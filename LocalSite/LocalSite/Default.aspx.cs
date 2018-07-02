@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using LocalSite.Model;
+using EncryptionAndDecryption;
 
 namespace LocalSite
 {
@@ -21,12 +22,26 @@ namespace LocalSite
         protected void LoginBtnID_Click(object sender, EventArgs e)
         {
             UserActions regu = new UserActions();
+            
             string s = regu.userLogin(LoginTextBoxID.Text+"@amphorainc.com",PasswordTextBoxID.Text);
-            if (s != null)
+            if (s == PasswordTextBoxID.Text)
             {
+                
                 Response.Redirect("/Account/Login.aspx");
                 //result.Visible = true;
                 //result.Text = "Suceesfully retrived data :" + s;
+            }
+            else if (s == "User is **NOT REGISTERED** yet")
+            {
+                result.Visible = true;
+                result.ForeColor = System.Drawing.Color.Red;
+                result.Text = s;
+            }
+            else
+            {
+                result.Visible = true;
+                result.ForeColor=System.Drawing.Color.RoyalBlue;
+                result.Text = "You have entered **WRONG PASSWORD**";
             }
         }
 
